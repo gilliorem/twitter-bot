@@ -1,0 +1,11 @@
+# entrer la commande `crontab -e` pour editer le cron (script qui s'execute automatiquement)
+
+SHELL=/bin/bash
+HOME=/
+
+# pour le script s'execute tous jours à 6h:
+0 6 * * * /usr/bin/python3 /var/www/html/test-twitter-bot/is_locked.py > /var/www/html/test-twitter-bot/listener.log 2>&1
+
+
+#plus d'infos sur https://crontab.guru/
+
